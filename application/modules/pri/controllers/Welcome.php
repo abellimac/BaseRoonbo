@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends MY_Controller {
+class Welcome extends MX_Controller {
 
 	public function __construct()
 	{
@@ -10,7 +10,8 @@ class Welcome extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->view('mes');
+		// $this->load->view('mes');
+		echo "hello in base roonbo";
 	}
 
 	public function guardar()
