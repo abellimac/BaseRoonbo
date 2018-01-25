@@ -167,8 +167,12 @@ class CI_Migration {
 		if ( ! $this->db->table_exists($this->_migration_table))
 		{
 			$this->dbforge->add_field(array(
+				'id' => array('type' => 'BIGINT', 'constraint' => 20, 'auto_increment' => TRUE),
 				'version' => array('type' => 'BIGINT', 'constraint' => 20),
+				'module_name' => array('type' => 'VARCHAR', 'constraint' => 50, 'default' => 'home')
 			));
+
+			$this->dbforge->add_key('id', TRUE);
 
 			$this->dbforge->create_table($this->_migration_table, TRUE);
 

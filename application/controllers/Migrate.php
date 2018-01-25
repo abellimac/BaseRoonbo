@@ -7,13 +7,14 @@ class Migrate extends CI_Controller {
   {
     $this->load->library('migration');
 
-    if ( ! $this->migration->current()) {
+    // if ( ! $this->migration->current()) {
+    if ( ! $this->migration->latest()) {
       show_error($this->migration->error_string());
     }
     else
     {
-    	echo "error";
-    	echo $this->migration->current();
+      echo "Migrate executed success!";
+      // https://www.screencast.com/t/Yppc4HyXFV
     }
   }
 }
