@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Create_Table_Page extends CI_Migration
+class Migration_Create_Table_Page extends CI_Migration
 {
 // migrations
 	public function up()
