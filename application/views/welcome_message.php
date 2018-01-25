@@ -5,7 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter Abel in develop ssh</title>
-
+	<link rel="stylesheet" href="<?php echo base_url('static/libraries/bootstrap-4.0.0-dist/css/bootstrap.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo base_url('static/libraries/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css'); ?>">
+	<script type="text/javascript" src="<?php echo base_url('static/libraries/jquery-3.2.1.slim.min.js') ?>"></script>
 	<style type="text/css">
 
 	::selection { background-color: #E13300; color: white; }

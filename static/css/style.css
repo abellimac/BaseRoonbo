@@ -1,0 +1,137 @@
+/** { box-sizing: border-box; }*/
+
+/*body { font-family: sans-serif; }*/
+
+body {
+	background-color: #f2f2f2;
+}
+/* ---- grid ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 100%;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 20%;
+}
+
+.grid-item {
+  height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 { width:  40%; }
+.grid-item--width3 { width:  60%; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+
+
+
+/* HEAD*/
+.navbar {
+    background-color: #fff;
+    min-height: 55px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.05);
+}
+/* END HEAD*/
+
+/* BOX LOGIN*/
+.air-card {
+    position: relative;
+    background-color: #fff;
+    margin: 30px;
+    padding: 50px 30px 50px 30px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.05);
+    max-width: 510px;
+	margin: 0 auto;
+	margin-top: 45px;
+}
+/* END BOX LOGIN*/
+
+/* FORM CONTROL*/
+.form-control {
+	border: 1px solid #c1e0ff;
+	border-radius: 0; 
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+.btn {
+    /*border-radius: 0;*/
+    border-radius: 0;
+    border: none;
+}
+.btn-primary {
+    background-color: #52beff;
+    /*border: none;*/
+    /*border-color: #34adf7;*/
+}
+.btn-primary:hover {
+    background-color: #34adf7;
+}
+.btn-primary:not([disabled]):not(.disabled).active, 
+.btn-primary:not([disabled]):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+    background-color: #34adf7;
+}
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: none
+}
+.btn-primary:not([disabled]):not(.disabled).active:focus, 
+.btn-primary:not([disabled]):not(.disabled):active:focus, 
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+/* END FORM CONTROL*/
+
+/* ICONS*/
+.icon-success {
+    color: #52beff;
+}
+/* END ICONS*/
+
+.cointainer-login {
+	position: relative;
+}
+
+.icon-login {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+}
+
+.pd-left-2em {
+	padding-left: 2em;
+}
+.content-inputs-login {
+    max-width: 320px;
+    margin: 0 auto;
+}
+.mg-left-0{
+    margin-bottom: 0;
+}
+.container-forgot {
+	text-align: right;
+	font-size: 14px;
+}
+.mg-bottom-1em {
+	margin-bottom: 1em;
+}
