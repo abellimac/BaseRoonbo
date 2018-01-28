@@ -28,7 +28,8 @@ if ( ! function_exists('loadModuleFileHelp'))
 	{
 		if (file_exists($path))
 		{
-			require_once($path);
+			var_dump(require_once($path));
+			// require_once($path);
 		}
 		else
 		{

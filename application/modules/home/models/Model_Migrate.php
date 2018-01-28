@@ -14,7 +14,8 @@ class Model_Migrate
 
 	public function getVersion()
 	{
-		return $this->_version;
+		// return $this->_version;
+		return 'get version';
 	}
 
 	public function setVersion($version)
