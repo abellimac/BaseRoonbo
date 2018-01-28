@@ -1,8 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migrate extends MY_Migration
+// class Migrate extends MY_Migration
+// class Migrate
+class Migrate extends CI_Controller
+// extends CI_Controller
 {
+	/**
+	 * Initialize Migration Class
+	 *
+	 * @param	array	$config
+	 * @return	void
+	 */
+	public function __construct($config = array())
+	{
+		parent::__construct($config);
+		$CI =& get_instance();
+		$CI->load->library('MY_Migration');
+		// var_dump($CI);
+	}
+
 	public function run_migration ($module, $version)
 	{
 		if ($module != null && $version != null)
@@ -33,5 +50,10 @@ class Migrate extends MY_Migration
 		// $response[ 'log' ] = $this->migration->get_log();
 
 		$this->buildResponseJSON($response, JSON_PRETTY_PRINT);
+	}
+
+	public function index()
+	{
+		// echo "herllo todo";
 	}
 }

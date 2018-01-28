@@ -3,7 +3,6 @@
  * load a Model to include it in the project
  */
 function gnLoadModel($modelClassPath) {
-    var_dump($modelClassPath);
     gnLoadFile(getRealPathFromCiPath($modelClassPath, "models"));
 }
 

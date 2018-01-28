@@ -9,29 +9,33 @@ class Migration_Create_Table_Page extends CI_Migration
 		$this->load->dbforge();
 
 		$this->dbforge->add_field(array(
-			'blog_id' => array(
+			'id' => array(
 				'type' => 'INT',
 				'constraint' => 5,
 				'unsigned' => TRUE,
 				'auto_increment' => TRUE
 			),
-			'blog_title' => array(
+			'title_html_site' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '100',
 			),
-			'blog_description' => array(
-				'type' => 'TEXT',
-				'null' => TRUE,
+			'language_site' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+			),
+			'logo_site' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '250',
 			),
 		));
 
-		$this->dbforge->add_key('blog_id', TRUE);  
-		$this->dbforge->create_table('blog');
+		$this->dbforge->add_key('id', TRUE);  
+		$this->dbforge->create_table('page');
 	}
 
 	public function down()
 	{
 		$this->load->dbforge();  
-		$this->dbforge->drop_table('blog');
+		$this->dbforge->drop_table('page');
 	}
 }
