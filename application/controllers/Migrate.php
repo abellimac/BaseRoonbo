@@ -3,14 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Migrate extends MY_Controller
 {
-	protected $ci;
-
 	function __construct()
 	{
 		parent::__construct();
-		$ci =& get_instance();
-		$ci->load->library('migration');
-		loadModelHelp('home/Model_Migrate');
+		$this->load->library('migration');
+		$this->load->model("home/Migrate_model", "migrate");
 	}
 
 	public function index()
@@ -27,9 +24,7 @@ class Migrate extends MY_Controller
 
 	public function runMigrate($version=null, $moduleName=null)
 	{
-		echo $this->$ci->getVersion();
-		// $this->load->library('migration');
-		// echo hello();
-		// echo "The version is $version, and the module name is $moduleName";
+		echo $this->migration->current();
+		echo $this->migrate->getVersion();
 	}
 }

@@ -1,5 +1,5 @@
 <?php
-class Model_Migrate
+class Migrate_model extends CI_Model
 {
 	const ID_FIELD = '';
 	const TABLE_NAME = '';

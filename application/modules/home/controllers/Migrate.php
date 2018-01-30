@@ -1,39 +1,35 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// class Migrate extends MY_Migration
-// class Migrate
-class Migrate extends CI_Controller
-// extends CI_Controller
+class Migrate extends MY_Controller
 {
-	/**
-	 * Initialize Migration Class
-	 *
-	 * @param	array	$config
-	 * @return	void
-	 */
 	public function __construct($config = array())
 	{
 		parent::__construct($config);
-		$CI =& get_instance();
-		$CI->load->library('MY_Migration');
-		// var_dump($CI);
+		$this->load->library('migration');
 	}
 
-	public function run_migration ($module, $version)
+	public function runMigration ($module, $version)
 	{
-		if ($module != null && $version != null)
-		{
-			$mod = $module;
-			$ver = $version;
-		}
-		else
-		{
-			return false;
-		}
+		// $result = $this->migration->set_module_version($module, $version);
+		$this->migration->set_module($module);
+		$this->migration->latest();
+		// if (! $this->migration->latest())
+		// {
+		// 	# code...
+		// }
+		// if ($module != null && $version != null)
+		// {
+		// 	$mod = $module;
+		// 	$ver = $version;
+		// }
+		// else
+		// {
+		// 	return false;
+		// }
 
-		$this->migration->set_module($mod);
-		$result = $this->migration->version($ver);
+		// $this->migration->set_module($mod);
+		// $result = $this->migration->version($ver);
 		// $response = array();
 
 		// if ( $result === false )
@@ -49,11 +45,6 @@ class Migrate extends CI_Controller
 		// $response[ 'errors' ] = $this->migration->get_errors();
 		// $response[ 'log' ] = $this->migration->get_log();
 
-		$this->buildResponseJSON($response, JSON_PRETTY_PRINT);
-	}
-
-	public function index()
-	{
-		// echo "herllo todo";
+		// $this->buildResponseJSON($response, JSON_PRETTY_PRINT);
 	}
 }
