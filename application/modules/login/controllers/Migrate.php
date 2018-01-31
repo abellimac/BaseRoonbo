@@ -11,7 +11,7 @@ class Migrate extends MY_Controller
 
 	public function run()
 	{
-		$module = 'home';
+		$module = 'login';
 		$this->migration->set_module($module);
 		$resultMigration = $this->migration->latest();
 		if ($resultMigration)
