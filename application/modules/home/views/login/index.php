@@ -1,16 +1,16 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-<header class="header-navbar-wrapper header-navbar-skinny" role="banner">
-	<nav role="navigation" class="navbar navbar-default visible-xs">
-		<div class="container p-xs-top p-xs-bottom">
-			<div class="nav navbar-header disable-float text-center p-lg-top">
-				<a href="/" class="navbar-brand nav-brand-mobile m-0" target="_self">Roonbo</a>
+<header>
+	<nav role="navigation" class="navbar">
+		<div class="container">
+			<div>
+				<a href="/" class="navbar-brand m-0" target="_self">Roonbo</a>
 			</div>
 		</div>
 	</nav>
 </header>
 
 <div class="container">
-	<div id="main-auth-card" class="air-card">
+	<div class="air-card">
 		<h4 class="text-center mg-bottom-1em">Welcome to Roonbo</h4>
 		<div class="content-inputs-login">
 			<div class="cointainer-login">
@@ -22,7 +22,7 @@
 			</div>
 			<div class="cointainer-login">
 				<div class="form-group mg-left-0">
-					<input type="text" class="form-control pd-left-2em" id="login_username" required="required" placeholder="Password">
+					<input type="text" class="form-control pd-left-2em" id="login_password" required="required" placeholder="Password">
 					<span class="glyphicon air-icon-user form-control-feedback" aria-hidden="true"></span>
 				</div>
 				<i class="fa fa-lock icon-success icon-login" aria-hidden="true"></i>
