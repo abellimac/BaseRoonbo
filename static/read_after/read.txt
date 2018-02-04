@@ -1,0 +1,15 @@
+---------------------------------------------
+sudo chown www-data:www-data /var/www/html/baseroonbo
+sudo chmod -R 775 /var/www/html/baseroonbo
+sudo usermod -a -G www-data abel
+
+for change permission
+----------------------------
+
+for open ssh
+ssh -l sroot  190.186.186.93
+
+-----------------------------
+sudo chown www-data:www-data /var/www/html/baseroonbo
+sudo chmod -R 775 /var/www/html/baseroonbo
+sudo usermod -a -G www-data abel

@@ -11,6 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="<?php echo base_url('static/libraries/bootstrap-4.0.0-dist/css/bootstrap.min.css'); ?>">
 	<link rel="stylesheet" href="<?php echo base_url('static/libraries/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css'); ?>">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="<?php echo base_url('static/font/web-fonts-with-css/css/fontawesome-all.css'); ?>"> -->
 	<link rel="stylesheet" href="<?php echo('static/css/style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('static/libraries/jquery-3.2.1.slim.min.js') ?>"></script>
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
